@@ -1,6 +1,7 @@
-package io.github.thebluetropics.examplemod.mixin;
+package io.github.experion.examplemod.mixin;
 
-import io.github.thebluetropics.examplemod.ExampleMod;
+
+import io.github.experion.examplemod.ModInit;
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class TestMixin {
   @Inject(at = @At("HEAD"), method = "runServer")
   private void runServer(CallbackInfo info) {
-    ExampleMod.LOGGER.info("Hello, World! (Common mixin)");
+    ModInit.LOGGER.info("TestMixin Initialized!");
   }
 }

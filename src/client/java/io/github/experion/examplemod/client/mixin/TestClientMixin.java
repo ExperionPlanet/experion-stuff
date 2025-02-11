@@ -1,6 +1,6 @@
-package io.github.thebluetropics.examplemod.client.mixin;
+package io.github.experion.examplemod.client.mixin;
 
-import io.github.thebluetropics.examplemod.ExampleMod;
+import io.github.experion.examplemod.client.ModInitClient;
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class TestClientMixin {
   @Inject(at = @At("HEAD"), method = "run")
   private void run(CallbackInfo info) {
-    ExampleMod.LOGGER.info("Hello, World! (Client mixin)");
+    ModInitClient.LOGGER.info("TestClient Mixin Initialize!");
   }
 }

@@ -3,14 +3,17 @@
   "id": "%mod_id%",
   "version": "%version%",
   "name": "Example Mod",
-  "authors": ["thebluetropics"],
+  "authors": ["ExperionPlanet"],
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.thebluetropics.examplemod.ExampleMod"
+      "io.github.experion.examplemod.ModInit"
     ],
     "client": [
-      "io.github.thebluetropics.examplemod.client.ExampleModClient"
+      "io.github.experion.examplemod.client.ModInitClient"
+    ],
+    "fabric-datagen": [
+      "io.github.experion.examplemod.datagen.ModDataGenerator"
     ]
   },
   "mixins": [
@@ -24,9 +27,9 @@
     }
   ],
   "depends": {
-    "minecraft": "1.21",
-    "fabricloader": ">=0.16.0",
-    "fabric-api": ">=0.100.1+1.21",
+    "minecraft": "1.21.4",
+    "fabricloader": ">=0.16.10",
+    "fabric-api": ">=0.115.1+1.21.4",
     "java": ">=21"
   }
 }

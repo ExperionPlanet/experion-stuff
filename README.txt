@@ -1,1 +1,1 @@
-A fabric example mod.
+Experion's fabric example mod.

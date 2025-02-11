@@ -1,5 +1,5 @@
 plugins {
-  id("fabric-loom") version "1.8-SNAPSHOT"
+  id("fabric-loom") version "1.9-SNAPSHOT"
   id("maven-publish")
 }
 
@@ -12,6 +12,12 @@ dependencies {
   mappings("net.fabricmc:yarn:${properties["mappings_version"].toString()}:v2")
   modImplementation("net.fabricmc:fabric-loader:${properties["fabric_loader_version"].toString()}")
   modImplementation("net.fabricmc.fabric-api:fabric-api:${properties["fabric_api_version"].toString()}")
+}
+
+fabricApi {
+  configureDataGeneration {
+    client = true
+  }
 }
 
 loom {
