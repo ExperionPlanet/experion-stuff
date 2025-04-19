@@ -7,19 +7,15 @@ import io.github.experionplanet.experionstuff.utils.EnchantmentUtils;
 import net.minecraft.client.item.TooltipType;
 import net.minecraft.component.DataComponentType;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -43,9 +39,10 @@ public class ExperionOrbItem extends Item {
                     stack.set(ModDataComponents.CURRENT_EXP, 0);
 
                     world.playSound(null, user.getX(), user.getY(), user.getZ(), ModSoundEvents.EXPERION_ORB_OUT, SoundCategory.PLAYERS);
+                    /*
+                    // This used for ORB SHARING enchantment but might be useless
 
-                    if (EnchantmentHelper.getLevel(ModEnchantments.ORB_SHARING, stack) > 0) {
-                        Vec3d pos = user.getPos();
+                       Vec3d pos = user.getPos();
                         while( withdrawEXP > 0) {
                             int i = ExperienceOrbEntity.roundToOrbSize(withdrawEXP);
                             withdrawEXP -= i;
@@ -63,9 +60,9 @@ public class ExperionOrbItem extends Item {
                             orb.setVelocity(offsetX, ySpeed, offsetZ);
                             world.spawnEntity(orb);
                         }
-                    } else {
-                        EnchantmentUtils.addPlayerXP(user, withdrawEXP);
-                    }
+                        */
+
+                    EnchantmentUtils.addPlayerXP(user, withdrawEXP);
 
                 }else {
                     user.sendMessage(Text.literal("Empty").formatted(Formatting.RED), true);
@@ -122,7 +119,7 @@ public class ExperionOrbItem extends Item {
     }
 
     private static int getMAXLEVELS(ItemStack stack) {
-        return 30 * MathHelper.clamp(EnchantmentHelper.getLevel(ModEnchantments.ORB_CAPACITY, stack), 1, 3);
+        return 30 + (30 * MathHelper.clamp(EnchantmentHelper.getLevel(ModEnchantments.ORB_CAPACITY, stack), 0, 3));
     }
 
     private static int totalAddings(ItemStack stack, int amount) {
@@ -153,5 +150,15 @@ public class ExperionOrbItem extends Item {
     @Override
     public int getItemBarColor(ItemStack stack) {
         return MathHelper.hsvToRgb(3f, 1f, 1f);
+    }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public int getEnchantability() {
+        return 20;
     }
 }

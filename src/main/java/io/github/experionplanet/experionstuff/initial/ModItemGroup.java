@@ -16,7 +16,7 @@ public class ModItemGroup {
     public static final RegistryKey<ItemGroup> EXPERION_ITEM_GROUP_KEY = RegistryKey.of(RegistryKeys.ITEM_GROUP, MaybeLib.newID("experion_item_group"));
     public static final ItemGroup EXPERION_ITEM_GROUP = FabricItemGroup.builder()
             .displayName(Text.literal("Experion Stuffs"))
-            .icon(() -> new ItemStack(Items.EXPERIENCE_BOTTLE))
+            .icon(() -> new ItemStack(ModItems.EXPI_ICON))
             .build();
 
     public static void boot() {
@@ -36,6 +36,8 @@ public class ModItemGroup {
                     v.add(ModItems.ENDLESS_VELOCITY_MUSIC_DISC);
                     v.add(ModItems.RIVER_SUN_MUSIC_DISC);
                     v.add(ModItems.ROLLING_HAY_MUSIC_DISC);
+
+                    v.add(ModItems.EXPI_ICON);
 
 
                 }

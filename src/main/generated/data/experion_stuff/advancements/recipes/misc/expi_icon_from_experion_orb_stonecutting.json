@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_experion_orb": {
+      "conditions": {
+        "items": [
+          {
+            "items": "experion_stuff:experion_orb"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:expi_icon_from_experion_orb_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_experion_orb"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:expi_icon_from_experion_orb_stonecutting"
+    ]
+  }
+}

@@ -40,6 +40,8 @@ public class ItemTagDataGen extends FabricTagProvider<Item> {
                 .add(ModBlocks.BLEEDING_CANDY_HEART.asItem())
                 .setReplace(false);
 
+
+
         getOrCreateTagBuilder(ItemTags.BOW_ENCHANTABLE).add(ModItems.PHANTOM_BOW);
         getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE).add(ModItems.PHANTOM_BOW);
 

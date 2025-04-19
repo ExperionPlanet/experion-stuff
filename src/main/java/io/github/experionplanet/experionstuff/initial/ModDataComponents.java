@@ -12,7 +12,7 @@ import net.minecraft.util.dynamic.Codecs;
 import java.util.function.UnaryOperator;
 
 public class ModDataComponents {
-    public static final DataComponentType<Integer> CURRENT_EXP = register("current_exp", build -> build.codec(Codecs.rangedInt(0, EnchantmentUtils.getExperienceForLevel(120))).packetCodec(PacketCodecs.VAR_INT));
+    public static final DataComponentType<Integer> CURRENT_EXP = register("current_exp", build -> build.codec(Codecs.rangedInt(0, EnchantmentUtils.getExperienceForLevel(140))).packetCodec(PacketCodecs.VAR_INT));
 
     private static <T> DataComponentType<T> register(String name, UnaryOperator<DataComponentType.Builder<T>> builderOperator) {
         return Registry.register(Registries.DATA_COMPONENT_TYPE, new Identifier(name), (builderOperator.apply(DataComponentType.builder())).build());

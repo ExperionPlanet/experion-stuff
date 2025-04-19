@@ -18,5 +18,7 @@ public class ModItems {
 
     public static final Item PHANTOM_BOW = MaybeLib.regItem(new PhantomBowItem(new Item.Settings().maxCount(1).maxDamage(690).rarity(Rarity.RARE)), "phantom_bow");
 
+    public static final Item EXPI_ICON = MaybeLib.regItem(new Item(new Item.Settings().maxCount(1)), "expi_icon");
+
     public static void init() {}
 }

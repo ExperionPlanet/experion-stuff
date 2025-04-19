@@ -27,5 +27,6 @@ public class ModelDataGen extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ROLLING_HAY_MUSIC_DISC, Models.GENERATED);
         itemModelGenerator.register(ModBlocks.IRIS.asItem(), Models.GENERATED);
         itemModelGenerator.register(ModBlocks.PASSION_FLOWER.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModItems.EXPI_ICON, Models.GENERATED);
     }
 }

@@ -19,7 +19,7 @@ public class TranslateDataGen extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translator) {
         translator.add(ModItems.EXPERION_ORB, "Experion Orb");
         translator.add(ModEnchantments.ORB_CAPACITY, "Orb Capacity");
-        translator.add(ModEnchantments.ORB_SHARING, "Orb Sharing");
+        translator.add(ModItems.EXPI_ICON, "Expi Icon");
 
         translator.add(ModBlocks.BLEEDING_HEART, "Bleeding Heart");
         translator.add(ModBlocks.BLEEDING_ALBA_HEART, "Bleeding Alba Heart");

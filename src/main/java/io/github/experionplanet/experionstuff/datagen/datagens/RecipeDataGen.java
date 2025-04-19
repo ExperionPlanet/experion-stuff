@@ -44,5 +44,7 @@ public class RecipeDataGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLEEDING_CANDY_HEART, Items.POPPY, 1);
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRIS, Items.POPPY, 1);
         offerStonecuttingRecipe(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PASSION_FLOWER, Items.POPPY, 1);
+
+        offerStonecuttingRecipe(recipeExporter, RecipeCategory.MISC, ModItems.EXPI_ICON, ModItems.EXPERION_ORB, 1);
     }
 }

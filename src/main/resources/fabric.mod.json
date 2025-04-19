@@ -4,6 +4,7 @@
   "version": "%version%",
   "name": "Experion Stuff",
   "authors": ["ExperionPlanet"],
+  "description": "Adds random stuff I want when I'm bored but also balanced with survival too",
   "environment": "*",
   "entrypoints": {
     "main": [

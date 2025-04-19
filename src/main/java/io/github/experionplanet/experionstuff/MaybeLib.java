@@ -21,9 +21,7 @@ public class MaybeLib {
         return Registry.register(Registries.BLOCK, newID(id), v);
     }
 
-    public static Enchantment regEnchant(Enchantment v, String id) {
-        return Registry.register(Registries.ENCHANTMENT, newID(id), v);
-    }
+
 
     public static Identifier newID(String id) {
         return Identifier.of(ModInit.ID, id);

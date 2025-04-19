@@ -1,7 +1,7 @@
-// 1.20.6	2025-04-19T15:31:11.0663211	Experion Stuff/Model Definitions
+// 1.20.6	2025-04-19T16:46:21.3891357	Experion Stuff/Model Definitions
 7e34e0709a2bffdae88c8f4a49f626328128e404 assets\experion_stuff\models\item\bleeding_alba_heart.json
-8427d3e2be5f41d82e824533bf973ab858dfb379 assets\experion_stuff\models\block\bleeding_candy_heart.json
 d5acfc70c7b1bba1bfbbfd0f3d7e95d539e48a79 assets\experion_stuff\models\item\bleeding_candy_heart.json
+8427d3e2be5f41d82e824533bf973ab858dfb379 assets\experion_stuff\models\block\bleeding_candy_heart.json
 d9c9152a98883065c6dfcb68b2357c096adfe47f assets\experion_stuff\models\item\bleeding_heart.json
 0e95ba4ede9d6ad018dd54f8d20131bfb1412879 assets\experion_stuff\models\item\rolling_hay_music_disc.json
 0c912a134846060a150fef6731276ae57cc887c8 assets\experion_stuff\models\item\endless_velocity_music_disc.json
@@ -13,3 +13,4 @@ f5994a78482aa48b616c108de88f2e91821c50e5 assets\experion_stuff\blockstates\bleed
 5d31f35208db8f7139206e4f8abd6da9843a03a1 assets\experion_stuff\models\item\river_sun_music_disc.json
 99bb1deac417e5b16c888213ef594eb5f669adf0 assets\experion_stuff\models\item\iris.json
 90fa1ed3d7a39ef8951ea4ed2a0c48551902cfcb assets\experion_stuff\blockstates\bleeding_candy_heart.json
+4582227a58cde6ad0bf06e6d1acfe6bf9aff0091 assets\experion_stuff\models\item\expi_icon.json
