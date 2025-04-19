@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:poppy"
+  },
+  "result": {
+    "count": 1,
+    "id": "experion_stuff:iris"
+  }
+}

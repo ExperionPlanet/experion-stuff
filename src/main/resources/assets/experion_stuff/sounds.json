@@ -1,0 +1,50 @@
+{
+  "experion_orb_in": {
+    "subtitle": "sound.experion_stuff.experion_orb_in",
+    "sounds": ["experion_stuff:experion_orb_in"]
+  },
+  "experion_orb_out": {
+    "subtitle": "sound.experion_stuff.experion_orb_out",
+    "sounds": ["experion_stuff:experion_orb_out"]
+  },
+  "phantom_bow_shoot": {
+    "subtitle": "sound.experion_stuff.phantom_bow_shoot",
+    "sounds": ["experion_stuff:phantom_bow_shoot1","experion_stuff:phantom_bow_shoot2","experion_stuff:phantom_bow_shoot3"]
+  },
+  "phantom_bow_impact": {
+    "subtitle": "sound.experion_stuff.phantom_bow_impact",
+    "sounds": ["experion_stuff:phantom_bow_impact1","experion_stuff:phantom_bow_impact2","experion_stuff:phantom_bow_impact3","experion_stuff:phantom_bow_impact4"]
+  },
+  "phantom_bow_drop": {
+    "subtitle": "sound.experion_stuff.phantom_bow_drop",
+    "sounds": ["experion_stuff:phantom_bow_drop1","experion_stuff:phantom_bow_drop2","experion_stuff:phantom_bow_drop3"]
+  },
+  "river_sun": {
+    "subtitle": "sound.experion_stuff.river_sun",
+    "sounds": [
+      {
+        "name": "experion_stuff:river_sun",
+        "stream": true
+      }
+    ]
+  },
+  "endless_velocity": {
+    "subtitle": "sound.experion_stuff.endless_velocity",
+    "sounds": [
+      {
+        "name": "experion_stuff:endless_velocity",
+        "stream": true
+      }
+    ]
+  },
+  "rolling_hay": {
+    "subtitle": "sound.experion_stuff.rolling_hay",
+    "sounds": [
+      {
+        "name": "experion_stuff:rolling_hay",
+        "stream": true
+      }
+    ]
+  }
+
+}

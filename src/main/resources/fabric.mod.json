@@ -2,18 +2,18 @@
   "schemaVersion": 1,
   "id": "%mod_id%",
   "version": "%version%",
-  "name": "Example Mod",
+  "name": "Experion Stuff",
   "authors": ["ExperionPlanet"],
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.experion.examplemod.ModInit"
+      "io.github.experionplanet.experionstuff.ModInit"
     ],
     "client": [
-      "io.github.experion.examplemod.client.ModInitClient"
+      "io.github.experionplanet.experionstuff.client.ModInitClient"
     ],
     "fabric-datagen": [
-      "io.github.experion.examplemod.datagen.ModDataGenerator"
+      "io.github.experionplanet.experionstuff.datagen.ModDataGenerator"
     ]
   },
   "mixins": [
@@ -27,9 +27,9 @@
     }
   ],
   "depends": {
-    "minecraft": "1.21.4",
-    "fabricloader": ">=0.16.10",
-    "fabric-api": ">=0.115.1+1.21.4",
+    "minecraft": "1.20.6",
+    "fabricloader": ">=0.16.0",
+    "fabric-api": ">=0.97.8+1.20.6",
     "java": ">=21"
   }
 }

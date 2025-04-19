@@ -1,0 +1,1 @@
+Add random stuff what I want but it is balanced with survival too

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "experion_stuff:item/rolling_hay_music_disc"
+  }
+}

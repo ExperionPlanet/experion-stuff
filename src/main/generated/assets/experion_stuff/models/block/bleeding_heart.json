@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "experion_stuff:block/bleeding_heart"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "experion_stuff:item/phantom_bow",
+  "textures": {
+    "layer0": "experion_stuff:item/phantom_bow_pulling_0"
+  }
+}
