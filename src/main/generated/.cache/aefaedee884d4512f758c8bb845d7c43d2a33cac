@@ -1,8 +1,0 @@
-// 1.20.6	2025-04-19T16:46:21.3915326	Experion Stuff/Tags for minecraft:item
-87ed26a389b07018d790b0670858e250e7e82dab data\minecraft\tags\items\flowers.json
-aff81aa9620e925a14c0265e069d47697a864109 data\minecraft\tags\items\creeper_drop_music_discs.json
-aff81aa9620e925a14c0265e069d47697a864109 data\minecraft\tags\items\music_discs.json
-3cf6a47f36328d7d911b38a9508bee14b469a313 data\minecraft\tags\items\enchantable\bow.json
-3cf6a47f36328d7d911b38a9508bee14b469a313 data\experion_stuff\tags\items\exclusive\phantom_bow.json
-422ec05745fe5c1dfeb1490f444a7e9d93e5aa86 data\experion_stuff\tags\items\enchantable\orb_item.json
-3cf6a47f36328d7d911b38a9508bee14b469a313 data\minecraft\tags\items\enchantable\durability.json
