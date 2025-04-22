@@ -3,15 +3,19 @@ plugins {
   id("maven-publish")
 }
 
+val modId = properties["mod_id"] as String
+val artifactName = properties["artifact_name"] as String
+val minecraftVersion = properties["minecraft_version"] as String
+
 base {
-  archivesName = "${properties["artifact_name"].toString()}-fabric"
+  archivesName = "${artifactName}-fabric-${minecraftVersion}"
 }
 
 dependencies {
-  minecraft("com.mojang:minecraft:${properties["minecraft_version"].toString()}")
-  mappings("net.fabricmc:yarn:${properties["mappings_version"].toString()}:v2")
-  modImplementation("net.fabricmc:fabric-loader:${properties["fabric_loader_version"].toString()}")
-  modImplementation("net.fabricmc.fabric-api:fabric-api:${properties["fabric_api_version"].toString()}")
+  minecraft("com.mojang:minecraft:${minecraftVersion}")
+  mappings("net.fabricmc:yarn:${properties["mappings_version"]}:v2")
+  modImplementation("net.fabricmc:fabric-loader:${properties["fabric_loader_version"]}")
+  modImplementation("net.fabricmc.fabric-api:fabric-api:${properties["fabric_api_version"]}")
 }
 
 fabricApi {
@@ -24,14 +28,18 @@ loom {
   runs {
     named("client") {
       runDir = "run/client"
+
+      client()
     }
     named("server") {
       runDir = "run/server"
+
+      server()
     }
   }
 
   mods {
-    create(properties["mod_id"].toString()) {
+    create(modId) {
       sourceSet("main")
     }
   }
@@ -53,18 +61,18 @@ tasks.withType(JavaCompile::class.java).configureEach {
 
 tasks.processResources {
   filesMatching("fabric.mod.json") {
-    filter { line ->
-      Regex("%([a-z_]+)%").replace(line) { match ->
-        properties[match.groupValues[1]]?.toString() ?: match.value
-      }
-    }
+    filter(fun(line: String): String {
+      return Regex("%([a-z_]+)%").replace(line, fun(match: MatchResult): String {
+        return properties[match.groupValues[1]]?.toString() ?: match.value
+      })
+    })
   }
 }
 
 tasks.named<Jar>("jar") {
   from("LICENSE") {
     rename {
-      "LICENSE-${properties["artifact_name"]}"
+      "LICENSE-${modId}"
     }
   }
 }
@@ -72,19 +80,15 @@ tasks.named<Jar>("jar") {
 publishing {
   publications {
     create<MavenPublication>("mavenJava") {
-      groupId    = project.group.toString()
+      groupId = project.group.toString()
       artifactId = project.base.archivesName.get()
-      version    = project.version.toString()
+      version = project.version.toString()
 
       from(components["java"])
     }
   }
 
   repositories {
-    maven {
-      name = "Mods"
-      url = uri("file://${projectDir}/repository")
-    }
     maven {
       name = "GithubPackages"
       url = uri(properties["github_packages_url"].toString())
@@ -93,5 +97,6 @@ publishing {
         password = System.getenv("GITHUB_TOKEN")
       }
     }
+    mavenLocal()
   }
 }

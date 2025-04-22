@@ -10,6 +10,7 @@
 
 # Loom
 /run/
+/src/main/generated/.cache
 
 # MacOS
 .DS_Store
