@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:poppy"
+  },
+  "result": {
+    "count": 4,
+    "id": "experion_stuff:flower_cluster"
+  }
+}

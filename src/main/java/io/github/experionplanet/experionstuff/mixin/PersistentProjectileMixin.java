@@ -34,7 +34,7 @@ public class PersistentProjectileMixin implements PhantomArrowGetter {
     private void initDataTrackerModified(DataTracker.Builder builder, CallbackInfo cit) {
         builder.add(PHANTOMIZED, false);
     }
-    /*
+
     @Inject(at = @At("TAIL"), method = "onBlockHit")
     private void onBlockHitted(BlockHitResult blockHitResult, CallbackInfo ci) {
         Vec3d pos = blockHitResult.getPos();
@@ -42,9 +42,9 @@ public class PersistentProjectileMixin implements PhantomArrowGetter {
 
         if (!world.isClient()) {
             ServerWorld serverWorld = (ServerWorld) world;
-            serverWorld.spawnParticles(ModParticles.PHANTOM_SPLASH, pos.getX(), pos.getY(), pos.getZ(), 1, 0,0,0,0);
+            serverWorld.spawnParticles(ModParticles.PHANTOM_DUST, pos.getX(), pos.getY(), pos.getZ(), 15, 0,0,0,0);
         }
-    }*/
+    }
 
     @Override
     public boolean isPhantomized() {

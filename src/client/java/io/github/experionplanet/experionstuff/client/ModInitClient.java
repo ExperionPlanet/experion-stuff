@@ -1,5 +1,6 @@
 package io.github.experionplanet.experionstuff.client;
 
+import io.github.experionplanet.experionstuff.client.particles.PhantomDustParticle;
 import io.github.experionplanet.experionstuff.client.particles.PhantomSplashParticle;
 import io.github.experionplanet.experionstuff.initial.ModBlocks;
 import io.github.experionplanet.experionstuff.initial.ModItems;
@@ -20,12 +21,18 @@ public class ModInitClient implements ClientModInitializer {
 
   @Override
   public void onInitializeClient() {
-    LOGGER.info("Hello, World! (Client initialize)");
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLEEDING_ALBA_HEART, RenderLayer.getCutout());
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLEEDING_HEART, RenderLayer.getCutout());
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLEEDING_CANDY_HEART, RenderLayer.getCutout());
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.IRIS, RenderLayer.getCutout());
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PASSION_FLOWER, RenderLayer.getCutout());
+    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FLOWER_CLUSTER, RenderLayer.getCutout());
+    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_BEE_BALM, RenderLayer.getCutout());
+    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_BEE_BALM, RenderLayer.getCutout());
+    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_WHEAT_CELOSIA, RenderLayer.getCutout());
+    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ORANGE_WHEAT_CELOSIA, RenderLayer.getCutout());
+    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_WHEAT_CELOSIA, RenderLayer.getCutout());
+
 
     ModelPredicateProviderRegistry.register(ModItems.PHANTOM_BOW, new Identifier("pull"), (stack, world, entity, seed) -> {
       if (entity == null) {
@@ -38,6 +45,7 @@ public class ModInitClient implements ClientModInitializer {
     ModelPredicateProviderRegistry.register(ModItems.PHANTOM_BOW, new Identifier("pulling"), (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F);
 
     regParti(ModParticles.PHANTOM_SPLASH, PhantomSplashParticle.Factory::new);
+    regParti(ModParticles.PHANTOM_DUST, PhantomDustParticle.Factory::new);
 
   }
 

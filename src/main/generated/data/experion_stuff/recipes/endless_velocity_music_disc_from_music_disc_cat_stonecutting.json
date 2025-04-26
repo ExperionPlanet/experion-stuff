@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:music_disc_cat"
+  },
+  "result": {
+    "count": 1,
+    "id": "experion_stuff:endless_velocity_music_disc"
+  }
+}

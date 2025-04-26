@@ -3,7 +3,6 @@
   "package": "io.github.experionplanet.experionstuff.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "TestMixin",
     "RangedWeaponMixin",
     "PersistentProjectileMixin",
     "EntityAccessorMixin"

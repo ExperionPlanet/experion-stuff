@@ -38,6 +38,12 @@ public class ItemTagDataGen extends FabricTagProvider<Item> {
                 .add(ModBlocks.BLEEDING_ALBA_HEART.asItem())
                 .add(ModBlocks.BLEEDING_HEART.asItem())
                 .add(ModBlocks.BLEEDING_CANDY_HEART.asItem())
+                .add(ModBlocks.FLOWER_CLUSTER.asItem())
+                .add(ModBlocks.ORANGE_WHEAT_CELOSIA.asItem())
+                .add(ModBlocks.PINK_WHEAT_CELOSIA.asItem())
+                .add(ModBlocks.YELLOW_WHEAT_CELOSIA.asItem())
+                .add(ModBlocks.RED_BEE_BALM.asItem())
+                .add(ModBlocks.PINK_BEE_BALM.asItem())
                 .setReplace(false);
 
 

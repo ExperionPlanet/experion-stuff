@@ -25,6 +25,13 @@ public class BlockTagDataGen extends FabricTagProvider<Block> {
                 .add(ModBlocks.BLEEDING_CANDY_HEART)
                 .add(ModBlocks.IRIS)
                 .add(ModBlocks.PASSION_FLOWER)
+                .add(ModBlocks.ORANGE_WHEAT_CELOSIA)
+                .add(ModBlocks.PINK_WHEAT_CELOSIA)
+                .add(ModBlocks.YELLOW_WHEAT_CELOSIA)
+                .add(ModBlocks.PINK_BEE_BALM)
+                .add(ModBlocks.RED_BEE_BALM)
+                .add(ModBlocks.FLOWER_CLUSTER)
+
                 .setReplace(false);
     }
 }

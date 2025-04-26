@@ -33,6 +33,15 @@ public class ModItemGroup {
                     v.add(ModBlocks.IRIS);
                     v.add(ModBlocks.PASSION_FLOWER);
 
+                    v.add(ModBlocks.FLOWER_CLUSTER);
+
+                    v.add(ModBlocks.YELLOW_WHEAT_CELOSIA);
+                    v.add(ModBlocks.PINK_WHEAT_CELOSIA);
+                    v.add(ModBlocks.ORANGE_WHEAT_CELOSIA);
+
+                    v.add(ModBlocks.PINK_BEE_BALM);
+                    v.add(ModBlocks.RED_BEE_BALM);
+
                     v.add(ModItems.ENDLESS_VELOCITY_MUSIC_DISC);
                     v.add(ModItems.RIVER_SUN_MUSIC_DISC);
                     v.add(ModItems.ROLLING_HAY_MUSIC_DISC);

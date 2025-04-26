@@ -9,6 +9,7 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -25,7 +26,11 @@ public class ArrowEntityInject {
 
     @Inject(at = @At("TAIL"), method = "onHit")
     private void OnHitted(LivingEntity entity, CallbackInfo ci) {
+        World world = entity.getWorld();
 
+        if (!world.isClient()) {
+            ModInit.LOGGER.info("ITS SERVER");
+        }
     }
 
 

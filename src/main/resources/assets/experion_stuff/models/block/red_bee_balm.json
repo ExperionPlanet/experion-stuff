@@ -1,0 +1,7 @@
+{
+  "parent": "experion_stuff:block/pink_bee_balm",
+  "textures": {
+    "0": "experion_stuff:block/red_bee_balm",
+    "particle": "experion_stuff:block/red_bee_balm"
+  }
+}

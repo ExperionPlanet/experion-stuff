@@ -2,8 +2,14 @@
   "block.experion_stuff.bleeding_alba_heart": "Bleeding Alba Heart",
   "block.experion_stuff.bleeding_candy_heart": "Bleeding Candy Heart",
   "block.experion_stuff.bleeding_heart": "Bleeding Heart",
+  "block.experion_stuff.flower_cluster": "Flower Cluster",
   "block.experion_stuff.iris": "Iris",
+  "block.experion_stuff.orange_wheat_celosia": "Orange Wheat Celosia",
   "block.experion_stuff.passion_flower": "Passion Flower",
+  "block.experion_stuff.pink_bee_balm": "Pink Bee Balm",
+  "block.experion_stuff.pink_wheat_celosia": "Pink Wheat Celosia",
+  "block.experion_stuff.red_bee_balm": "Red Bee Balm",
+  "block.experion_stuff.yellow_wheat_celosia": "Yellow Wheat Celosia",
   "enchantment.experion_stuff.orb_capacity": "Orb Capacity",
   "item.experion_stuff.endless_velocity_music_disc": "Music Disc",
   "item.experion_stuff.endless_velocity_music_disc.desc": "C418 - Endless Velocity",
@@ -13,5 +19,12 @@
   "item.experion_stuff.river_sun_music_disc": "Music Disc",
   "item.experion_stuff.river_sun_music_disc.desc": "C418 - River Sun",
   "item.experion_stuff.rolling_hay_music_disc": "Music Disc",
-  "item.experion_stuff.rolling_hay_music_disc.desc": "C418 - Rolling Hay"
+  "item.experion_stuff.rolling_hay_music_disc.desc": "C418 - Rolling Hay",
+  "sound.experion_stuff.endless_velocity": "Endless Velocity - C418",
+  "sound.experion_stuff.experion_orb_in": "Exp Stored",
+  "sound.experion_stuff.experion_orb_out": "Exp Withdraw",
+  "sound.experion_stuff.phantom_bow_impact": "Phantom Bow Impact",
+  "sound.experion_stuff.phantom_bow_shoot": "Phantom Bow Shoot",
+  "sound.experion_stuff.river_sun": "River Sun - C418",
+  "sound.experion_stuff.rolling_hay": "Rolling Hay - C418"
 }

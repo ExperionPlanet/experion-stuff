@@ -26,8 +26,6 @@ public class RangedWeaponMixin {
     private void createArrowEntityInject(World world, LivingEntity shooter, ItemStack weaponStack, ItemStack projectileStack, boolean critical, CallbackInfoReturnable<PersistentProjectileEntity> info) {
         PersistentProjectileEntity projectile = info.getReturnValue();
 
-        ModInit.LOGGER.info("IS IT CRITICAL? " + critical);
-
         if (weaponStack.isIn(ModTags.PHANTOM_BOW)) {
             ((PhantomArrowGetter) projectile).setPhantomize(true);
             projectile.setSound(ModSoundEvents.PHANTOM_BOW_IMPACT);
