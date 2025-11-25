@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "experion_stuff:item/corrupted_pumpkin_hoe_active"
+  }
+}

@@ -3,7 +3,7 @@
   "package": "io.github.experionplanet.experionstuff.client.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "ArrowEntityRendererMixin"
+
   ],
   "injectors": {
     "defaultRequire": 1

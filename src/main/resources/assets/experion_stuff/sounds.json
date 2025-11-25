@@ -19,6 +19,22 @@
     "subtitle": "sound.experion_stuff.phantom_bow_drop",
     "sounds": ["experion_stuff:phantom_bow_drop1","experion_stuff:phantom_bow_drop2","experion_stuff:phantom_bow_drop3"]
   },
+  "lucy_yapping": {
+    "subtitle": "sound.experion_stuff.lucy_yapping",
+    "sounds": [
+      "experion_stuff:lucy1",
+      "experion_stuff:lucy2",
+      "experion_stuff:lucy3",
+      "experion_stuff:lucy4",
+      "experion_stuff:lucy5",
+      "experion_stuff:lucy6",
+      "experion_stuff:lucy7",
+      "experion_stuff:lucy8",
+      "experion_stuff:lucy9",
+      "experion_stuff:lucy10",
+      "experion_stuff:lucy11"
+    ]
+  },
   "river_sun": {
     "subtitle": "sound.experion_stuff.river_sun",
     "sounds": [

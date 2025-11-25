@@ -24,8 +24,12 @@ public class ModItemGroup {
 
         ItemGroupEvents.modifyEntriesEvent(EXPERION_ITEM_GROUP_KEY).register(
                 v -> {
+                    v.add(ModBlocks.BASALT_FIRE_PIT);
+
                     v.add(ModItems.EXPERION_ORB);
+                    v.add(ModItems.SOUL_ORB);
                     v.add(ModItems.PHANTOM_BOW);
+                    v.add(ModItems.LUCY_THE_AXE);
 
                     v.add(ModBlocks.BLEEDING_HEART);
                     v.add(ModBlocks.BLEEDING_ALBA_HEART);
@@ -47,6 +51,7 @@ public class ModItemGroup {
                     v.add(ModItems.ROLLING_HAY_MUSIC_DISC);
 
                     v.add(ModItems.EXPI_ICON);
+
 
 
                 }

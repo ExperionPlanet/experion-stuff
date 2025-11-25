@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:experience_bottle",
+    "O": "minecraft:ender_pearl",
+    "P": "minecraft:emerald"
+  },
+  "pattern": [
+    " # ",
+    "#OP",
+    " P "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_stuff:experion_orb"
+  }
+}

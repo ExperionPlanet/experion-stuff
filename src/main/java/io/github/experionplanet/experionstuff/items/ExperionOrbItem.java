@@ -4,17 +4,18 @@ import io.github.experionplanet.experionstuff.initial.ModDataComponents;
 import io.github.experionplanet.experionstuff.initial.ModEnchantments;
 import io.github.experionplanet.experionstuff.initial.ModSoundEvents;
 import io.github.experionplanet.experionstuff.utils.EnchantmentUtils;
-import net.minecraft.client.item.TooltipType;
-import net.minecraft.component.DataComponentType;
+import net.minecraft.component.ComponentType;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.consume.UseAction;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
@@ -26,7 +27,13 @@ public class ExperionOrbItem extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public UseAction getUseAction(ItemStack stack) {
+        return super.getUseAction(stack);
+    }
+
+
+    @Override
+    public ActionResult use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
 
         if (!world.isClient()) {
@@ -89,25 +96,16 @@ public class ExperionOrbItem extends Item {
             }
 
             if (succ) {
-                return TypedActionResult.success(stack, true);
+                return ActionResult.SUCCESS;
             }
         }
 
         return super.use(world, user, hand);
     }
 
-    @Override
-    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        int currEXP = getEXP(stack, false);
 
-        tooltip.add(Text.literal("EXP: " + currEXP + "/" + getEXP(stack, true)).formatted(Formatting.YELLOW));
-        tooltip.add(Text.literal("LEVELS: " + EnchantmentUtils.getLevelForExperience(currEXP) + "/" + getMAXLEVELS(stack)).formatted(Formatting.GREEN));
-
-        super.appendTooltip(stack, context, tooltip, type);
-    }
-
-    private static int getEXP(ItemStack stack, boolean maxMode) {
-        DataComponentType<Integer> y = ModDataComponents.CURRENT_EXP;
+    public static int getEXP(ItemStack stack, boolean maxMode) {
+        ComponentType<Integer> y = ModDataComponents.CURRENT_EXP;
         int res = 0;
         int maxLevels = getMAXLEVELS(stack);
         if (stack.get(y) != null && !maxMode) {
@@ -118,11 +116,11 @@ public class ExperionOrbItem extends Item {
         return res;
     }
 
-    private static int getMAXLEVELS(ItemStack stack) {
-        return 30 + (30 * MathHelper.clamp(EnchantmentHelper.getLevel(ModEnchantments.ORB_CAPACITY, stack), 0, 3));
+    public static int getMAXLEVELS(ItemStack stack) {
+        return 30 + (30 * MathHelper.clamp(ModEnchantments.getEnchantLevel(stack, ModEnchantments.ORB_CAPACITY), 0, 3));
     }
 
-    private static int totalAddings(ItemStack stack, int amount) {
+    public static int totalAddings(ItemStack stack, int amount) {
         int curr = getEXP(stack, false);
         int max = getEXP(stack, true);
         if (curr >= max) {
@@ -152,13 +150,4 @@ public class ExperionOrbItem extends Item {
         return MathHelper.hsvToRgb(3f, 1f, 1f);
     }
 
-    @Override
-    public boolean isEnchantable(ItemStack stack) {
-        return true;
-    }
-
-    @Override
-    public int getEnchantability() {
-        return 20;
-    }
 }

@@ -40,9 +40,9 @@ public class PersistentProjectileMixin implements PhantomArrowGetter {
         Vec3d pos = blockHitResult.getPos();
         World world = entity.getEntityWorld();
 
-        if (!world.isClient()) {
-            ServerWorld serverWorld = (ServerWorld) world;
-            serverWorld.spawnParticles(ModParticles.PHANTOM_DUST, pos.getX(), pos.getY(), pos.getZ(), 15, 0,0,0,0);
+        if (!world.isClient() && isPhantomized()) {
+            //ServerWorld serverWorld = (ServerWorld) world;
+            //serverWorld.spawnParticles(ModParticles.PHANTOM_DUST, pos.getX(), pos.getY(), pos.getZ(), 15, 0,0,0,0);
         }
     }
 

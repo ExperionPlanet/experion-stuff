@@ -3,18 +3,26 @@ package io.github.experionplanet.experionstuff.initial;
 import io.github.experionplanet.experionstuff.MaybeLib;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.*;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.ItemTags;
 
 public class ModEnchantments {
-    public static final Enchantment ORB_CAPACITY = regEnchant(new Enchantment(Enchantment.properties(ModTags.ORB_ITEM_ENCHANTABLE, 5, 3, Enchantment.leveledCost(23, 9), Enchantment.constantCost(50), 5, EquipmentSlot.MAINHAND)), "orb_capacity");
-    //public static final Enchantment ORB_SHARING = regEnchant(new Enchantment(Enchantment.properties(ModTags.ORB_ITEM_ENCHANTABLE, 2, 1, Enchantment.constantCost(1), Enchantment.constantCost(41), 4, EquipmentSlot.MAINHAND)),"orb_sharing");
-
+    public static final RegistryKey<Enchantment> ORB_CAPACITY = of("orb_capacity");
     public static void init() {}
 
-    public static Enchantment regEnchant(Enchantment v, String id) {
-        return Registry.register(Registries.ENCHANTMENT, MaybeLib.newID(id), v);
+    private static RegistryKey<Enchantment> of(String path) {
+        return RegistryKey.of(RegistryKeys.ENCHANTMENT, MaybeLib.newID(path));
     }
+
+    public static int getEnchantLevel(ItemStack stack, RegistryKey<Enchantment> enchantment){
+        for (RegistryEntry<Enchantment> enchantments : stack.getEnchantments().getEnchantments()){
+            if (enchantments.toString().contains(enchantment.getValue().toString())){
+                return stack.getEnchantments().getLevel(enchantments);
+            }
+        }
+        return 0;
+    }
+
 }

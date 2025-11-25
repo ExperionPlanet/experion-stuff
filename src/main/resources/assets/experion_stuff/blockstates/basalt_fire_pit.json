@@ -1,0 +1,11 @@
+{
+  "variants": {
+
+  "topped=false": {
+    "model": "experion_stuff:block/basalt_firepit_top"
+  },
+    "topped=true": {
+      "model": "experion_stuff:block/basalt_firepit_bottom"
+    }
+  }
+}

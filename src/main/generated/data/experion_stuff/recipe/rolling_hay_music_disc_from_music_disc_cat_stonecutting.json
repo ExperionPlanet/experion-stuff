@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:music_disc_cat",
+  "result": {
+    "count": 1,
+    "id": "experion_stuff:rolling_hay_music_disc"
+  }
+}

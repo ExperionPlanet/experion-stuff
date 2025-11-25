@@ -1,18 +1,19 @@
 package io.github.experionplanet.experionstuff.client;
 
-import io.github.experionplanet.experionstuff.client.particles.PhantomDustParticle;
-import io.github.experionplanet.experionstuff.client.particles.PhantomSplashParticle;
+import io.github.experionplanet.experionstuff.client.misc.ItemToolTip;
+import io.github.experionplanet.experionstuff.client.misc.TemporaryHologramTextRenderer;
 import io.github.experionplanet.experionstuff.initial.ModBlocks;
-import io.github.experionplanet.experionstuff.initial.ModItems;
-import io.github.experionplanet.experionstuff.initial.ModParticles;
+import io.github.experionplanet.experionstuff.initial.ModEntities;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.minecraft.client.item.ModelPredicateProviderRegistry;
-import net.minecraft.client.render.RenderLayer;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
+import net.minecraft.client.render.BlockRenderLayer;
+import net.minecraft.client.render.entity.DisplayEntityRenderer;
+import net.minecraft.client.render.entity.EmptyEntityRenderer;
+import net.minecraft.client.render.entity.EntityRendererFactories;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleType;
-import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,31 +22,22 @@ public class ModInitClient implements ClientModInitializer {
 
   @Override
   public void onInitializeClient() {
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLEEDING_ALBA_HEART, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLEEDING_HEART, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLEEDING_CANDY_HEART, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.IRIS, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PASSION_FLOWER, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FLOWER_CLUSTER, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_BEE_BALM, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_BEE_BALM, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_WHEAT_CELOSIA, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ORANGE_WHEAT_CELOSIA, RenderLayer.getCutout());
-    BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_WHEAT_CELOSIA, RenderLayer.getCutout());
+    BlockRenderLayerMap.putBlock(ModBlocks.BLEEDING_ALBA_HEART, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.BLEEDING_HEART, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.BLEEDING_CANDY_HEART, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.IRIS, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.PASSION_FLOWER, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.FLOWER_CLUSTER, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.RED_BEE_BALM, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.PINK_BEE_BALM, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.YELLOW_WHEAT_CELOSIA, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.ORANGE_WHEAT_CELOSIA, BlockRenderLayer.CUTOUT);
+    BlockRenderLayerMap.putBlock(ModBlocks.PINK_WHEAT_CELOSIA, BlockRenderLayer.CUTOUT);
 
+    ItemToolTip.register();
 
-    ModelPredicateProviderRegistry.register(ModItems.PHANTOM_BOW, new Identifier("pull"), (stack, world, entity, seed) -> {
-      if (entity == null) {
-        return 0.0F;
-      } else {
-        return entity.getActiveItem() != stack ? 0.0F : (float)(stack.getMaxUseTime() - entity.getItemUseTimeLeft()) / 20.0F;
-      }
-    });
+    EntityRendererFactories.register(ModEntities.TEMPORARY_HOLOGRAM_TEXT, TemporaryHologramTextRenderer::new);
 
-    ModelPredicateProviderRegistry.register(ModItems.PHANTOM_BOW, new Identifier("pulling"), (stack, world, entity, seed) -> entity != null && entity.isUsingItem() && entity.getActiveItem() == stack ? 1.0F : 0.0F);
-
-    regParti(ModParticles.PHANTOM_SPLASH, PhantomSplashParticle.Factory::new);
-    regParti(ModParticles.PHANTOM_DUST, PhantomDustParticle.Factory::new);
 
   }
 

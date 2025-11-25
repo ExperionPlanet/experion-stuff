@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:music_disc_cat",
+  "result": {
+    "count": 1,
+    "id": "experion_stuff:river_sun_music_disc"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:phantom_membrane",
+    "*": "minecraft:emerald",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    " #S",
+    "* S",
+    " #S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_stuff:phantom_bow"
+  }
+}

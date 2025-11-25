@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:redstone_block",
+    "*": "minecraft:stick",
+    "I": "minecraft:iron_block",
+    "K": "minecraft:netherite_axe"
+  },
+  "pattern": [
+    "I##",
+    "#K ",
+    " * "
+  ],
+  "result": {
+    "count": 1,
+    "id": "experion_stuff:lucy_the_axe"
+  }
+}

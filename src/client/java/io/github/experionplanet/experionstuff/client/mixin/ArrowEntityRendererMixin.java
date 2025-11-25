@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ArrowEntityRendererMixin {
     private static final Identifier PHANTOM_TEXTURE = MaybeLib.newID("textures/entity/phantom_arrow.png");
 
-    @Inject(at = @At("HEAD"), method = "getTexture", cancellable = true)
+    @Inject(at = @At("TAIL"), method = "getTexture", cancellable = true)
     private void getTexture(ArrowEntity arrowEntity, CallbackInfoReturnable<Identifier> cit) {
         if (((PhantomArrowGetter) arrowEntity).isPhantomized()) {
             cit.setReturnValue(PHANTOM_TEXTURE);

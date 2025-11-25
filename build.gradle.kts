@@ -1,5 +1,5 @@
 plugins {
-  id("fabric-loom") version "1.9-SNAPSHOT"
+  id("fabric-loom") version "1.13-SNAPSHOT"
   id("maven-publish")
 }
 
@@ -19,7 +19,9 @@ dependencies {
 }
 
 fabricApi {
-  configureDataGeneration()
+  configureDataGeneration() {
+    client = true
+  }
 }
 
 loom {

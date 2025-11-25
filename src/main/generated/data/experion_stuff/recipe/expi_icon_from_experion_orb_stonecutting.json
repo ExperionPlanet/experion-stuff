@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "experion_stuff:experion_orb",
+  "result": {
+    "count": 1,
+    "id": "experion_stuff:expi_icon"
+  }
+}

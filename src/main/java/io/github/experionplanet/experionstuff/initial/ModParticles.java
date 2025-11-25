@@ -9,12 +9,12 @@ import net.minecraft.registry.Registry;
 
 public class ModParticles {
 
-    public static final SimpleParticleType PHANTOM_SPLASH = FabricParticleTypes.simple();
-    public static final SimpleParticleType PHANTOM_DUST = FabricParticleTypes.simple();
+    //public static final SimpleParticleType PHANTOM_SPLASH = FabricParticleTypes.simple();
+    //public static final SimpleParticleType PHANTOM_DUST = FabricParticleTypes.simple();
 
     public static void boot() {
-        Registry.register(Registries.PARTICLE_TYPE, MaybeLib.newID("phantom_splash"), PHANTOM_SPLASH);
-        Registry.register(Registries.PARTICLE_TYPE, MaybeLib.newID("phantom_dust"), PHANTOM_DUST);
+        //Registry.register(Registries.PARTICLE_TYPE, MaybeLib.newID("phantom_splash"), PHANTOM_SPLASH);
+        //Registry.register(Registries.PARTICLE_TYPE, MaybeLib.newID("phantom_dust"), PHANTOM_DUST);
     }
 
 }

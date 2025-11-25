@@ -1,0 +1,7 @@
+{
+  "parent": "experion_stuff:block/firepit_top",
+  "textures": {
+    "0": "minecraft:block/basalt_side",
+    "1": "minecraft:block/basalt_top"
+  }
+}
